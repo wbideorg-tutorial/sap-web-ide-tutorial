@@ -1,0 +1,19 @@
+<mvc:View controllerName="northwind1.Northwind1.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
+	xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<ComboBox id="combo1" change="onChange" items="{/Customers?$select=Country}">
+							<core:Item key="{Country}" text="{Country}"></core:Item>
+						</ComboBox>
+						<List id="list1">
+							<StandardListItem type="Active" press="handleListItemPress" title="{CompanyName} {Country}"/>
+						</List>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
